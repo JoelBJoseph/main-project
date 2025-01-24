@@ -6,7 +6,7 @@ class GeminiApiService {
     private apiKey: string;
 
     constructor(apiKey: string) {
-        this.apiKey = "AIzaSyDUgVflvVTaq3SBFV3FeYF57G_U55Atft8";
+        this.apiKey = apiKey;
     }
 
     async transpile({ sourceCode, fileName }: TranspileOptions): Promise<TranspileResult> {
@@ -58,4 +58,4 @@ class GeminiApiService {
 
 // Note: In a real application, you would securely manage this API key
 // and not expose it in the client-side code.
-export const geminiApi = new GeminiApiService('YOUR_GEMINI_API_KEY');
+export const geminiApi = new GeminiApiService('AIzaSyDUgVflvVTaq3SBFV3FeYF57G_U55Atft8');
